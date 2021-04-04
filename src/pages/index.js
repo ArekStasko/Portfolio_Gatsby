@@ -3,12 +3,9 @@ import { StaticImage } from "gatsby-plugin-image"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import styled from "styled-components"
-import "../assets/styles/mainPage.css"
-import { TextPlugin } from "gsap/TextPlugin";
-
+import ScrambledText from '../components/scrambler/scrambler'
 
 gsap.registerPlugin(ScrollTrigger)
-gsap.registerPlugin(TextPlugin);
 
 const Wrapper = styled.div`
   position: relative;
@@ -77,26 +74,6 @@ const IndexPage = ({ data }) => {
     })
   }
 
-  const TextMix = () => {
-    gsap.to(".side_text",
-    {
-        duration: 1, 
-        text:"JUNIOR",
-        ease: "none"  
-      }
-    )
-  }
-
-  const TextMixOut = () => {
-    gsap.to(".side_text",
-    {
-        duration: 1, 
-        text:"FRONTEND",
-        ease: "none"  
-      }
-    )
-  }
-
   return (
     <>
       <Wrapper className="scrollWrapper" onMouseMove={e => MouseMove(e)}>
@@ -124,9 +101,7 @@ const IndexPage = ({ data }) => {
           />
         </div>
 
-        <div onMouseMove={TextMix} onMouseOut={TextMixOut} className='side_sentence'>
-          <h2 className='side_text'>FRONTEND</h2>
-        </div>
+        <ScrambledText />
 
         <div className="main_text-wrapper">
           <p>(ABOUT.)</p>
