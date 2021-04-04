@@ -14,6 +14,14 @@ background-color: #2625ff;
 transition: all 1s ease-out;
 }
 
+.initials_wrapper{
+    position: fixed;
+    font-family: Allura;
+    font-weight: 100;
+    top: 40px;
+    left: 60px;
+}
+
 
 .navbar-btn{
     position: fixed;
@@ -22,8 +30,10 @@ transition: all 1s ease-out;
     justify-content: center;
     align-items: center;
     z-index: 2;
-    top: 80px;
-    right: 150px;
+    top: 0;
+    right: 40px;
+    width: 100px;
+    height: 100px;
     transition: all 500ms ease-in-out;
 }
 

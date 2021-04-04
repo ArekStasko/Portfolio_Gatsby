@@ -14,7 +14,8 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `lexend`
+          `lexend`,
+          `Allura`
         ],
         display: 'swap'
       }

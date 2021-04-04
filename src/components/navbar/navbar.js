@@ -9,6 +9,7 @@ transform: ${({show}) => (show ? "translateY(-100%)" : "translateY(0)")};
 visibility: ${({show}) => (show ? "hidden" : "visible")};
 `
 
+
 const Navbar = () => {
 
 const [show, setShow] = useState(true)
@@ -19,6 +20,9 @@ const handleClick = () => {
 
     return(
         <>
+        <div className='initials_wrapper'>
+            <h1>AS .</h1>
+        </div>
         <div className='navbar-btn'>
          <button className='btn-element' onClick={handleClick}><BentoIcon show={show}/></button>
          </div>
