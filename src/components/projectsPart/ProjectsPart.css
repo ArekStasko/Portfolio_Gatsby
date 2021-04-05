@@ -13,8 +13,71 @@
 }
 
 .Projects_main-wrapper{
-    width: 100%;
+    width: 70%;
+    height: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
+}
+
+.Projects_photos{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.portfolio_template,
+.whats_matter,
+.task_and_I {
+    position: absolute;
+    border-radius: 10px;
+    perspective: 1000px;
+    box-shadow: 0px 2px 30px 11px rgba(0,0,0,0.70);
+}
+
+.portfolio_template{
+   margin-bottom: 300px;
+}
+
+.task_and_I{
+    margin-top: 300px;
+}
+
+.whats_matter{
+    margin-left: 300px;
+    z-index: 2;
+}
+
+
+.Projects_description{
+    width: 30%;
+    height: 50%;
+    font-size: 20px;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.Projects_description div {
+    background-color: black;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    width: 150px;
+    height: 150px;
+    transition: all 1s ease;
+    font-size: 10px;
+    box-shadow: 0px 1px 3px 5px rgba(0,0,0,0.70);
+}
+
+.Projects_description div:hover {
+    transform: scale(1.1);
+}
+
+.Projects_description a {
+    text-decoration: none;
+    color: white;
 }
