@@ -4,6 +4,7 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import styled from "styled-components"
 import ScrambledText from '../components/scrambler/scrambler'
+import ProjectsPart from '../components/projectsPart/ProjectsPart'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -80,7 +81,7 @@ const IndexPage = ({ data }) => {
         <div className="hero" data-animation="2">
           <StaticImage
             layout="constrained"
-            width={300}
+            width={250}
             placeholder="tracedSVG"
             quality="100"
             className="StyledHero"
@@ -91,10 +92,9 @@ const IndexPage = ({ data }) => {
         <div className="hero" data-animation="1">
           <StaticImage
             layout="constrained"
-            width={400}
+            width={350}
             placeholder="tracedSVG"
             quality="90"
-            breakpoints="[750, 1080, 1366, 1920]"
             className="StyledImage"
             src="../assets/images/golden_frame.png"
             alt="frame"
@@ -109,6 +109,7 @@ const IndexPage = ({ data }) => {
           <p>LIVE IN CRACOW</p>
         </div>
       </Wrapper>
+      <ProjectsPart/>
     </>
   )
 }
