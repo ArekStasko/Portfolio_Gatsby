@@ -11,11 +11,10 @@ gsap.registerPlugin(ScrollTrigger)
 const Wrapper = styled.div`
   position: relative;
   width: 100%;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0px auto;
+  margin: 50px auto;
 `
 
 const themeAnimation = (dataAnimation, el) => {
@@ -85,6 +84,7 @@ const IndexPage = ({ data }) => {
             placeholder="tracedSVG"
             quality="100"
             className="StyledHero"
+            loading='eager'
             src="../assets/images/hero.png"
             alt="hero"
           />
@@ -96,6 +96,7 @@ const IndexPage = ({ data }) => {
             placeholder="tracedSVG"
             quality="90"
             className="StyledImage"
+            loading='eager'
             src="../assets/images/golden_frame.png"
             alt="frame"
           />

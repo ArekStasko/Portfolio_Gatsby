@@ -1,10 +1,47 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { StaticImage } from "gatsby-plugin-image"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import './ProjectsPart.css'
 
 gsap.registerPlugin(ScrollTrigger)
+
+const themeAnimation = (dataAnimation, el) => {
+    switch (dataAnimation) {
+      case "1":
+        gsap.fromTo(
+          el,
+          { x: "+=200", opacity: 0 },
+          {
+            x: 0,
+            opacity: 1,
+            duration: 2,
+            scrollTrigger: {
+              trigger: el,
+              start: "top 70%",
+            },
+          }
+        )
+        break
+       case "2":
+        gsap.fromTo(
+          el,
+          { x: "-=200", opacity: 0 },
+          {
+            x: 0,
+            opacity: 1,
+            duration: 2,
+            scrollTrigger: {
+              trigger: el,
+              start: "top 60%",
+            },
+          }
+        )
+        break
+      default:
+        break
+    }
+  }
 
 
 const MouseMove = e => {
@@ -20,11 +57,18 @@ const MouseMove = e => {
 
 
 const ProjectsPart = () => {
+    useEffect(() => {
+        const elements = document.querySelectorAll(".scroll-anim")
+        elements.forEach(el => {
+          let dataAnimation = el.dataset.animation
+          themeAnimation(dataAnimation, el)
+        })
+      })
 
     return(
         <div className='main_projects-container' onMouseMove={e => MouseMove(e)}>
 
-            <div className='Projects-header'>
+            <div className='scroll-anim Projects-header' data-animation="1">
             <h1>Hello, i'm Arek and i would like to introduce you myself</h1>
             </div>
 
@@ -48,6 +92,7 @@ const ProjectsPart = () => {
             quality="100"
             src="../../assets/images/whats_matter.png"
             alt="project-photo"
+
           />
   <StaticImage
             layout="constrained"
@@ -60,7 +105,7 @@ const ProjectsPart = () => {
           />
                 </div>
 
-                <div className='Projects_description'>
+                <div className='scroll-anim Projects_description' data-animation="2">
 <h2>I try to do as many projects as possible, trying to keep rules such as dry or kiss</h2>
 <div>
  <a href='/'>See all projects &#10; &#x02192;</a>

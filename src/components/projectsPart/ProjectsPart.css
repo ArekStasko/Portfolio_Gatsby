@@ -1,23 +1,24 @@
 .main_projects-container{
     width: 100%;
-    height: 100vh;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: space-evenly;
+    margin-top: 300px;
 }
 
 .Projects-header{
- width: 45%;
- font-size: 30px;
+ width: 70%;
+ font-size: 20px;
 }
 
 .Projects_main-wrapper{
+    margin-top: 80px;
     width: 70%;
-    height: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    flex-wrap: wrap;
+
 }
 
 .Projects_photos{
@@ -29,30 +30,18 @@
 .portfolio_template,
 .whats_matter,
 .task_and_I {
-    position: absolute;
     border-radius: 10px;
     perspective: 1000px;
+    margin-top: 20px;
     box-shadow: 0px 2px 30px 11px rgba(0,0,0,0.70);
-}
-
-.portfolio_template{
-   margin-bottom: 300px;
-}
-
-.task_and_I{
-    margin-top: 300px;
-}
-
-.whats_matter{
-    margin-left: 300px;
-    z-index: 2;
 }
 
 
 .Projects_description{
-    width: 30%;
+    width: 100%;
     height: 50%;
-    font-size: 20px;
+    margin-top: 50px;
+    font-size: 15px;
     align-self: center;
     display: flex;
     flex-direction: column;
@@ -68,6 +57,7 @@
     align-self: center;
     width: 150px;
     height: 150px;
+    margin-top: 20px;
     transition: all 1s ease;
     font-size: 10px;
     box-shadow: 0px 1px 3px 5px rgba(0,0,0,0.70);
@@ -80,4 +70,57 @@
 .Projects_description a {
     text-decoration: none;
     color: white;
+}
+
+
+@media (min-width: 768px){
+
+.Projects_main-wrapper{
+        margin-top: 500px;
+}
+
+.portfolio_template,
+.whats_matter,
+.task_and_I {
+    position: absolute;
+}
+
+.portfolio_template{
+   margin-bottom: 300px;
+}
+
+.task_and_I{
+    margin-top: 300px;
+}
+
+.whats_matter{
+    margin-left: 300px;
+    z-index: 2;
+}
+
+.Projects_description{
+    margin-top: 330px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.Projects-header{
+    width: 45%;
+    font-size: 30px;
+}
+
+}
+
+@media (min-width: 1400px){
+    .Projects_main-wrapper{
+        margin-top: 50px;
+        width: 80%;
+        flex-direction: row;
+    }
+
+    .Projects_description{
+        width: 30%;
+        margin-bottom: 150px;
+        font-size: 20px;
+    }
 }
