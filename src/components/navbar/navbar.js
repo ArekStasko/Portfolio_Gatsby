@@ -5,6 +5,7 @@ import './navbar.css'
 import BentoIcon from './bentoIcon'
 
 const NavbarWrapper = styled.div`
+position: fixed;
 transform: ${({show}) => (show ? "translateY(-100%)" : "translateY(0)")};
 visibility: ${({show}) => (show ? "hidden" : "visible")};
 `
