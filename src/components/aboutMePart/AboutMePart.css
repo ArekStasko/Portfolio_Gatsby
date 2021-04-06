@@ -8,6 +8,7 @@
 
 .main_about-wrapper{
     width: 80%;
+    width: 100%;
     align-items: center;
 }
 
@@ -20,6 +21,22 @@
     letter-spacing: 3px;
     word-spacing: 3px;
     font-weight: 100;
+}
+
+.HoverOnImage,
+.HoverOffImage{
+    position: absolute;
+    z-index: -1;
+    bottom: 300px;
+    left: 400px;
+}
+
+.HoverOffImage{
+        display: none;
+}
+
+.HoverOnImage{
+    display: initial;
 }
 
 @media (min-width: 590px){
