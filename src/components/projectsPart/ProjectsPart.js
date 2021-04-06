@@ -15,7 +15,7 @@ const themeAnimation = (dataAnimation, el) => {
           {
             x: 0,
             opacity: 1,
-            duration: 2,
+            duration: 3,
             scrollTrigger: {
               trigger: el,
               start: "top 70%",
@@ -30,10 +30,10 @@ const themeAnimation = (dataAnimation, el) => {
           {
             x: 0,
             opacity: 1,
-            duration: 2,
+            duration: 3,
             scrollTrigger: {
               trigger: el,
-              start: "top 60%",
+              start: "top 90%",
             },
           }
         )

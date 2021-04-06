@@ -40,3 +40,20 @@ opacity: 0.9;
       transform: rotate(-90deg);
     }
 }
+
+
+@media (max-height: 725px){
+   .StyledHero{
+      max-width: 200px;
+      max-height: 220px;
+   }
+
+   .StyledImage{
+      max-width: 270px;
+      max-height: 345px;
+   }
+
+   .main_text-wrapper{
+      margin-top: 450px;
+   }
+}
