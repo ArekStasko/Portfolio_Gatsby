@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import styled from "styled-components"
 import ScrambledText from '../components/scrambler/scrambler'
 import ProjectsPart from '../components/projectsPart/ProjectsPart'
+import AboutMePart from '../components/aboutMePart/AboutMePart'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -111,6 +112,7 @@ const IndexPage = ({ data }) => {
         </div>
       </Wrapper>
       <ProjectsPart/>
+      <AboutMePart/>
     </>
   )
 }
