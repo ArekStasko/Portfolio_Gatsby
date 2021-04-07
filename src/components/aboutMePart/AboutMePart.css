@@ -7,6 +7,7 @@
 }
 
 .main_about-wrapper{
+    cursor: pointer;
     width: 80%;
     width: 100%;
     align-items: center;
@@ -23,16 +24,10 @@
     font-weight: 100;
 }
 
-.HoverOnImage{
-    position: absolute;
-    z-index: -1;
-    bottom: 600px;
-    left: -50px;
+.main_about-wrapper:hover .HoverOnImage{
+visibility: visible;
 }
 
-.HoverOnImage{
-    display: initial;
-}
 
 @media (min-width: 590px){
     .main_about-wrapper{
