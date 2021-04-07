@@ -23,16 +23,11 @@
     font-weight: 100;
 }
 
-.HoverOnImage,
-.HoverOffImage{
+.HoverOnImage{
     position: absolute;
     z-index: -1;
-    bottom: 300px;
-    left: 400px;
-}
-
-.HoverOffImage{
-        display: none;
+    bottom: 600px;
+    left: -50px;
 }
 
 .HoverOnImage{
