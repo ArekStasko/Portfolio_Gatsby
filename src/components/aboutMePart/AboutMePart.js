@@ -1,30 +1,14 @@
-import React, {useState} from "react"
+import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { gsap } from "gsap"
-import styled from "styled-components"
 import "./AboutMePart.css"
 
 
-
-
-
-const HoverImage = styled.div`
-position: absolute;
-visibility: hidden;
-z-index: -1;
-bottom: 600px;
-left: -50px;
-opacity: 0.8;
-`
-
-
 const AboutMePart = () => {
-//const [show, setShow] = useState(true)
-
 
   const mouseMove = e => {
     const tl = gsap.timeline()
-    tl.to(".HoverOnImage", {
+    tl.to(".hoverOnImage", {
       translateX: e.clientX - 80 + "px",
       translateY: e.clientY - 100 + "px",
     })
@@ -42,16 +26,17 @@ const AboutMePart = () => {
           devote as much time as possible to work and never leave unresolved
           problems
         </p>
-        <HoverImage className='HoverOnImage'>
+        <div className='hoverOnImage'>
           <StaticImage
             layout="constrained"
-            width={300}
             placeholder="tracedSVG"
             quality="100"
-            src="../assets/images/hero.png"
-            alt="hero"
+            width={300}
+            className='casual-photo'
+            src="../../assets/images/aboutAnim.png"
+            alt="casual-photo"
           />
-        </HoverImage>
+        </div>
       </div>
     </div>
   )

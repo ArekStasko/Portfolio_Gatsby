@@ -11,6 +11,18 @@
     width: 80%;
     width: 100%;
     align-items: center;
+    margin: 30px;
+    transition: all 1s ease;
+}
+
+.hoverOnImage{
+    position: absolute;
+    visibility: hidden;
+    z-index: -1;
+    bottom: 500px;
+    left: -50px;
+    opacity: 0;
+    transition: all 300ms linear;
 }
 
 .main_about-wrapper h2 {
@@ -24,8 +36,22 @@
     font-weight: 100;
 }
 
-.main_about-wrapper:hover .HoverOnImage{
+.main_about-wrapper:hover .hoverOnImage{
 visibility: visible;
+opacity: 1;
+}
+
+@media (min-height: 800px){
+    .hoverOnImage{
+        bottom: 700px;
+    }
+    
+}
+
+@media (max-width: 590px){
+    .hoverOnImage{
+       display: none;
+    }
 }
 
 
