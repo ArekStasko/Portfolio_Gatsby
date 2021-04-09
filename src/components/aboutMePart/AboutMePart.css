@@ -7,12 +7,14 @@
 }
 
 .main_about-wrapper{
+    display: block;
     cursor: pointer;
-    width: 80%;
-    width: 100%;
+    width: 90%;
     align-items: center;
     margin: 30px;
     transition: all 1s ease;
+    text-decoration: none;
+    color: white;
 }
 
 .hoverOnImage{
@@ -29,14 +31,22 @@
     font-size: 50px;
 }
 
-.main_about-wrapper p {
-    font-size: 30px;
+.main_about-wrapper p:first-of-type {
+    font-size: 45px;
     letter-spacing: 3px;
     word-spacing: 3px;
     font-weight: 100;
 }
 
-.main_about-wrapper a {
+.main_about-wrapper p:last-of-type {
+    display: none;
+    font-size: 15px;
+    letter-spacing: 3px;
+    word-spacing: 3px;
+    font-weight: 100;
+}
+
+.main_about-wrapper .mobile_about-link {
     background-color: #002020;
     border: 2px solid black;
     border-radius: 100px;
@@ -70,15 +80,23 @@ opacity: 1;
        display: none;
     }
 
-    .main_about-wrapper a {
+    .main_about-wrapper .mobile_about-link {
         display: flex;
     }
+
+    .main_about-wrapper p:last-of-type {
+       display: initial;
+    }
+
+    .main_about-wrapper p:first-of-type {
+        font-size: 25px;
+     }
 }
 
 
 @media (min-width: 590px){
     .main_about-wrapper{
-        width: 70%;
+       max-width: 60%;
     }
 
     .main_about-wrapper h2 {
@@ -93,7 +111,7 @@ opacity: 1;
 
 @media (min-width: 900px){
     .main_about-wrapper{
-        width: 50%;
+        max-width: 50%;
     }
 
     .main_about-wrapper h2 {

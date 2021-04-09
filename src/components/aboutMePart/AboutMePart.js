@@ -2,6 +2,7 @@ import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { gsap } from "gsap"
 import "./AboutMePart.css"
+import { Link } from "gatsby"
 
 
 const AboutMePart = () => {
@@ -16,9 +17,10 @@ const AboutMePart = () => {
 
   return (
     <div className="main_about-container">
-      <div
+      <Link
         onMouseMove={e => (mouseMove(e))}
         className="main_about-wrapper"
+        to='/aboutMe'
       >
         <h2>I love hard work</h2>
         <p>
@@ -26,9 +28,7 @@ const AboutMePart = () => {
           devote as much time as possible to work and never leave unresolved
           problems
         </p>
-<a href='/'>
- Read about me &#10; &#x02192;
-</a>
+        <p> ( click on text to se more about me ) </p>
         <div className='hoverOnImage'>
           <StaticImage
             layout="constrained"
@@ -40,7 +40,7 @@ const AboutMePart = () => {
             alt="casual-photo"
           />
         </div>
-      </div>
+      </Link>
     </div>
   )
 }

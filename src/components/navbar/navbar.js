@@ -29,7 +29,7 @@ const handleClick = () => {
          </div>
             <NavbarWrapper className='main_navbar-wrapper' show={show}>
                 <div className='navbar_link-wrapper'>
-               <a href='/' className='navbar_link'>ABOUT</a>
+               <a href='/aboutme' className='navbar_link'>ABOUT</a>
                <a href='/' className='navbar_link'>PROJECTS</a>
                </div>
 

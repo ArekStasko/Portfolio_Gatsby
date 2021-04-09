@@ -50,7 +50,7 @@
     align-items: center;
 }
 
-.Projects_description a {
+.Projects_description .projects-link {
     background-color: #002020;
     border: 2px solid black;
     border-radius: 100px;
@@ -67,7 +67,7 @@
     color: white;
 }
 
-.Projects_description a:hover {
+.Projects_description .projects-link:hover {
     transform: scale(1.1);
 }
 

@@ -3,6 +3,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import './ProjectsPart.css'
+import { Link } from 'gatsby'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -107,9 +108,12 @@ const ProjectsPart = () => {
 
                 <div className='scroll-anim Projects_description' data-animation="2">
 <h2>I try to do as many projects as possible, trying to keep rules such as dry or kiss</h2>
-<a href='/'>
+<Link 
+to='/projects'
+className='projects-link'
+>
  See all projects &#10; &#x02192;
-</a>
+</Link>
                 </div>
             </div>
         </div>
