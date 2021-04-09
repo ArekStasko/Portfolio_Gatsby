@@ -26,6 +26,9 @@ const AboutMePart = () => {
           devote as much time as possible to work and never leave unresolved
           problems
         </p>
+<a href='/'>
+ Read about me &#10; &#x02192;
+</a>
         <div className='hoverOnImage'>
           <StaticImage
             layout="constrained"
