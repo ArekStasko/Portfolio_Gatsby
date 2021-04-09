@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { Link } from 'gatsby'
 import styled from 'styled-components'
 import './navbar.css'
 
@@ -22,15 +23,15 @@ const handleClick = () => {
     return(
         <>
         <div className='initials_wrapper'>
-            <h1>AS .</h1>
+            <Link className='initials_link' to='/' >AS .</Link>
         </div>
         <div className='navbar-btn'>
          <button className='btn-element' onClick={handleClick}><BentoIcon show={show}/></button>
          </div>
             <NavbarWrapper className='main_navbar-wrapper' show={show}>
-                <div className='navbar_link-wrapper'>
-               <a href='/aboutme' className='navbar_link'>ABOUT</a>
-               <a href='/' className='navbar_link'>PROJECTS</a>
+                <div className='navbar_link-wrapper' onClick={handleClick}>
+               <Link to='/aboutMe' className='navbar_link'>ABOUT</Link>
+               <Link to='/projects' className='navbar_link'>PROJECTS</Link>
                </div>
 
                <div className='nav_footer-wrapper'>

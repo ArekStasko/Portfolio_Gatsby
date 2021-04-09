@@ -10,17 +10,23 @@ flex-direction: column;
 justify-content: space-around;
 align-items:center;
 color: white;
-background-color: #2625ff;
+background-color: #002020;
 transition: all 1s ease-out;
 }
 
 .initials_wrapper{
     position: fixed;
-    z-index: 4;
+    z-index: 3;
     font-family: Allura;
     font-weight: 100;
     top: 40px;
     left: 60px;
+}
+
+.initials_link{
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
 }
 
 
@@ -40,8 +46,8 @@ transition: all 1s ease-out;
 
 .btn-element{
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 40px;
+    left: 60px;
 }
     
 
@@ -89,7 +95,7 @@ transition: all 1s ease-out;
 .nav_footer{
     width: 80%;
     height: 1px;
-    background-color: #5151ff;
+    background-color: #202020;
     margin-bottom: 10px;
 }
 
