@@ -16,7 +16,7 @@ body{
    min-height: 100%;
    font-family: 'lexend';
    font-weight: 700;
-   background-color: #202020;
+   background-color: black;
    color: white;
 }
 

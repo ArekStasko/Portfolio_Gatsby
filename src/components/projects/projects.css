@@ -1,0 +1,60 @@
+.projects-container{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.projects-wrapper{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.project{
+display: flex;
+flex-direction: column;
+align-items: center;
+margin: 100px;
+}
+
+.project p {
+    visibility: hidden;
+}
+
+.project span{
+    font-family: Allura;
+    font-weight: 100;
+    font-size: 150px;
+}
+
+.w-image,
+.ti-image,
+.pt-image {
+    position: absolute;
+    visibility: hidden;
+    z-index: -1;
+    bottom: 600px;
+    left: -100px;
+    opacity: 0.5;
+    transition: all 300ms linear;
+}
+
+.template:hover span,
+.tasks:hover span{
+    color: black;
+}
+
+.whatsmatter:hover .w-image,
+.template:hover .pt-image,
+.tasks:hover .ti-image {
+visibility: visible;
+opacity: 1;
+}
+
+.whatsmatter:hover p,
+.template:hover p,
+.tasks:hover p {
+visibility: visible;
+opacity: 1;
+}

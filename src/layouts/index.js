@@ -6,6 +6,7 @@ import styled from 'styled-components'
 const PageContainer = styled.div`
 position: relative;
 overflow-y: hidden;
+overflow-x: hidden;
 `
 
 const MainLayout = ({ children }) => (
