@@ -1,13 +1,13 @@
 import React from 'react';
 
-const WhatsMatter = () => {
+const Portfolio = () => {
 
     return(
         <div className='panels-container'>
-            <h1>Whats matter section</h1>
+            <h1>Portfolio section</h1>
         </div>
 
     )
 }
 
-export default WhatsMatter
+export default Portfolio

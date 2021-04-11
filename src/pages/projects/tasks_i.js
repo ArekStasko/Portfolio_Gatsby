@@ -1,13 +1,13 @@
 import React from 'react';
 
-const WhatsMatter = () => {
+const TasksAndI = () => {
 
     return(
         <div className='panels-container'>
-            <h1>Whats matter section</h1>
+            <h1>Tasks and I section</h1>
         </div>
 
     )
 }
 
-export default WhatsMatter
+export default TasksAndI

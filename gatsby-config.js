@@ -15,7 +15,7 @@ module.exports = {
       options: {
         fonts: [
           `lexend`,
-          `Allura`
+          `Tangerine`
         ],
         display: 'swap'
       }

@@ -22,39 +22,76 @@ margin: 100px;
     visibility: hidden;
 }
 
-.project span{
-    font-family: Allura;
+.project .project-link{
+    font-family: Tangerine;
     font-weight: 100;
     font-size: 150px;
+    text-decoration: none;
+    color: white;
 }
 
 .w-image,
 .ti-image,
 .pt-image {
     position: absolute;
-    visibility: hidden;
+    visibility: hidden; 
     z-index: -1;
-    bottom: 600px;
-    left: -100px;
-    opacity: 0.5;
+    bottom: 500px;
+    left: 600px;
+    opacity: 0;
     transition: all 300ms linear;
-}
-
-.template:hover span,
-.tasks:hover span{
-    color: black;
 }
 
 .whatsmatter:hover .w-image,
 .template:hover .pt-image,
 .tasks:hover .ti-image {
 visibility: visible;
-opacity: 1;
+opacity: 0.7;
 }
 
 .whatsmatter:hover p,
 .template:hover p,
+.portfolio:hover p,
 .tasks:hover p {
 visibility: visible;
 opacity: 1;
+}
+
+
+@media (max-width: 768px) {
+    .w-image,
+    .ti-image,
+    .pt-image {
+       display: none;
+    }
+
+    .whatsmatter p,
+    .template p,
+    .portfolio p,
+    .tasks p {
+    visibility: visible;
+    }
+
+    .project{
+        margin: 100px 50px 50px 50px;
+        }
+        
+
+    .project .project-link{
+        font-size: 90px;
+    }
+    
+}
+
+@media (max-width: 375px) {
+
+    .project{
+        margin: 150px 50px 50px 50px;
+        }
+        
+
+    .project .project-link{
+        font-size: 50px;
+    }
+    
 }

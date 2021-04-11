@@ -21,7 +21,7 @@ margin: 5px;
 
 const TransitionDot = styled.div`
 transition: background-color 500ms ease-in-out;
-background-color: ${({show}) => (show  ? 'white' : '#002020')};
+background-color: ${({show}) => (show  ? 'white' : '#202020')};
 width: 4px;
 height: 4px;
 margin: 5px;
