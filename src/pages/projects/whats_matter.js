@@ -1,13 +1,14 @@
 import React from 'react';
+import WhatsMatter from '../../components/projects/infoSites/whatsMatter/whatsMatter'
 
-const WhatsMatter = () => {
+const WhatsMatterPage = () => {
 
     return(
-        <div className='panels-container'>
-            <h1>Whats matter section</h1>
-        </div>
+        <>
+            <WhatsMatter/>
+        </>
 
     )
 }
 
-export default WhatsMatter
+export default WhatsMatterPage

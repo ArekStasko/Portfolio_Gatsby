@@ -12,16 +12,38 @@ const animationMove = (name, e) => {
       translateY: e.clientY - 150 + "px",
     })
   }
+  
 
+  const themeAnimation = () => {
+        gsap.fromTo('.projects-container',
+          { y: "+=100", opacity: 0.3 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 2,
+            scrollTrigger: {
+              trigger: '.projects-container',
+              start: "top 90%",
+            },
+          }
+        )
+  }
+  
 
 const Projects = () => {
+
+  useEffect(()=>{
+    themeAnimation()
+  })
+
+const lol = 'dziala'
 
     return(
         <div className='projects-container'>
 
 <div className='projects-wrapper'>
 <div onMouseMove={e => (animationMove('.w-image', e))} className='project whatsmatter'>
-<Link to='/projects/whats_matter'  className='project-link'>W</Link>
+<Link to='/projects/whats_matter' lol={lol}  className='project-link'>W</Link>
 <p>Whats Matter</p>
 <StaticImage
             layout="constrained"
