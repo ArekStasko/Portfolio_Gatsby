@@ -21,7 +21,8 @@
  display: flex;
 }
 
-.main_info-wrapper .btn-wrapper div {
+.main_info-wrapper .btn-wrapper a {
+    cursor: pointer;
     background-color: #202020;
     border: 2px solid #002020;
     border-radius: 100px;
@@ -35,9 +36,11 @@
     transition: all 1s ease;
     font-size: 13px;
     margin: 10px;
+    text-decoration: none;
+    color: white;
 }
 
-.main_info-wrapper .btn-wrapper div:hover {
+.main_info-wrapper .btn-wrapper a:hover {
     transform: scale(1.1);
 }
 

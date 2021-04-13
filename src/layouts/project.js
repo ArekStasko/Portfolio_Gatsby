@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import "../components/projects/infoSites/whatsMatter.css"
+import "../components/projects/project.css"
 
 export const query = graphql`
   query queryProject($slug: String!) {
@@ -10,10 +10,21 @@ export const query = graphql`
         featuredImage {
           childImageSharp {
             gatsbyImageData(
-                width: 600
+                width: 550
+                placeholder: TRACED_SVG
+                quality: 100
             )
           }
         }
+        detailsImage {
+            childImageSharp {
+              gatsbyImageData(
+                  width: 550
+                  placeholder: TRACED_SVG
+                  quality: 100
+              )
+            }
+          }
         slug
         title
         text
@@ -24,7 +35,8 @@ export const query = graphql`
 
 const ProjectLayout = ({ data }) => {
   
-const image = getImage(data.mdx.frontmatter.featuredImage)
+const feturedImage = getImage(data.mdx.frontmatter.featuredImage)
+const detailsImage = getImage(data.mdx.frontmatter.detailsImage)
 
   return (
     <div className="main_info-container">
@@ -32,47 +44,16 @@ const image = getImage(data.mdx.frontmatter.featuredImage)
         <h1> {data.mdx.frontmatter.title} </h1>
         <p> {data.mdx.frontmatter.text} </p>
         <div className="btn-wrapper">
-          <div>Live</div>
-          <div>Github</div>
+          <a href="https://github.com/ArekStasko">Live</a>
+          <a href="https://github.com/ArekStasko">Github</a>
         </div>
       </div>
       <div className="main_image-wrapper">
-      <GatsbyImage image={image} alt={data.mdx.frontmatter.title} />
+      <GatsbyImage image={feturedImage} alt={data.mdx.frontmatter.title} />
+      <GatsbyImage image={detailsImage} alt={data.mdx.frontmatter.title} />
       </div>
     </div>
   )
 }
 
 export default ProjectLayout
-
-/*
-
-<StaticImage
-            layout="constrained"
-            placeholder="tracedSVG"
-            quality="100"
-            width={500}
-            src="../../../../assets/images/whats_matter-post.png"
-            alt="animated-image"
-          />
-
-*/
-
-/*
-
- mdx(frontmatter: { slug: {eq: $slug} }) {
-          frontmatter {
-            featuredImage {
-              childImageSharp {
-                fluid(maxWidth: 400) {
-                  src
-                }
-              }
-            }
-            slug
-            title
-          }
-          body
-        }
-
-*/
