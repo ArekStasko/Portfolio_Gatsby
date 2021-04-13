@@ -1,5 +1,5 @@
 import React from 'react';
-import WhatsMatter from '../../components/projects/infoSites/whatsMatter/whatsMatter'
+import WhatsMatter from '../../components/projects/infoSites/whatsMatter'
 
 const WhatsMatterPage = () => {
 

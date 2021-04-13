@@ -3,10 +3,13 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .projects-wrapper{
+width: 60%;
 display: flex;
+flex-wrap: wrap;
 justify-content: center;
 align-items: center;
 }
@@ -30,45 +33,10 @@ margin: 100px;
     color: white;
 }
 
-.w-image,
-.ti-image,
-.pt-image {
-    position: absolute;
-    visibility: hidden; 
-    z-index: -1;
-    bottom: 500px;
-    left: 600px;
-    opacity: 0;
-    transition: all 300ms linear;
-}
-
-.whatsmatter:hover .w-image,
-.template:hover .pt-image,
-.tasks:hover .ti-image {
-visibility: visible;
-opacity: 0.7;
-}
-
-.whatsmatter:hover p,
-.template:hover p,
-.portfolio:hover p,
-.tasks:hover p {
-visibility: visible;
-opacity: 1;
-}
-
 
 @media (max-width: 768px) {
-    .w-image,
-    .ti-image,
-    .pt-image {
-       display: none;
-    }
 
-    .whatsmatter p,
-    .template p,
-    .portfolio p,
-    .tasks p {
+    .project p {
     visibility: visible;
     }
 
