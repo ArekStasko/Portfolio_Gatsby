@@ -66,14 +66,14 @@ const Projects = ({ data }) => {
           const imageClass = "." + item.frontmatter.slug
           const title = item.frontmatter.title
           const firstLetter = title.charAt(0)
-
+          
           return (
             <ProjectWrapper
-              key="item.frontmatter.slug"
+              key={item.frontmatter.slug}
               onMouseMove={e => animationMove(imageClass, e)}
               className="project"
             >
-              <Link to="/projects/whats_matter" className="project-link">
+              <Link to={`/projects/${item.frontmatter.slug}`} className="project-link">
                 {firstLetter}
               </Link>
               <p>{item.frontmatter.title}</p>
