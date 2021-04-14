@@ -21,7 +21,6 @@ const themeAnimation = () => {
 }
 
 const animationMove = (name, e) => {
-  console.log(name)
   const tl = gsap.timeline()
   tl.to(name, {
     translateX: e.clientX - 800 + "px",
@@ -65,14 +64,17 @@ const Projects = ({ data }) => {
           const imageClass = "." + item.frontmatter.slug
           const title = item.frontmatter.title
           const firstLetter = title.charAt(0)
-          
+
           return (
             <ProjectWrapper
               key={item.frontmatter.slug}
               onMouseMove={e => animationMove(imageClass, e)}
               className="project"
             >
-              <Link to={`/projects/${item.frontmatter.slug}`} className="project-link">
+              <Link
+                to={`/projects/${item.frontmatter.slug}`}
+                className="project-link"
+              >
                 {firstLetter}
               </Link>
               <p>{item.frontmatter.title}</p>

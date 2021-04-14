@@ -1,7 +1,7 @@
 import React from "react"
-import HeroPage from '../components/heroPage/heroPage'
-import ProjectsPart from '../components/projectsPart/ProjectsPart'
-import AboutMePart from '../components/aboutMePart/AboutMePart'
+import HeroPage from '../components/mainPage/heroPage/heroPage'
+import ProjectsPart from '../components/mainPage/projectsPart/ProjectsPart'
+import AboutMePart from '../components/mainPage/aboutMePart/AboutMePart'
 
 
 const IndexPage = () => {

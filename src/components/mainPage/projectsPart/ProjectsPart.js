@@ -7,42 +7,34 @@ import { Link } from 'gatsby'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const themeAnimation = (dataAnimation, el) => {
-    switch (dataAnimation) {
-      case "1":
-        gsap.fromTo(
-          el,
-          { x: "+=200", opacity: 0 },
-          {
-            x: 0,
-            opacity: 1,
-            duration: 3,
-            scrollTrigger: {
-              trigger: el,
-              start: "top 70%",
-            },
-          }
-        )
-        break
-       case "2":
-        gsap.fromTo(
-          el,
-          { x: "-=200", opacity: 0 },
-          {
-            x: 0,
-            opacity: 1,
-            duration: 3,
-            scrollTrigger: {
-              trigger: el,
-              start: "top 90%",
-            },
-          }
-        )
-        break
-      default:
-        break
+const themeAnimation = () => {
+  gsap.fromTo(
+    ".scroll-anim",
+    { x: "+=100", opacity: 0.3 },
+    {
+      x: 0,
+      opacity: 1,
+      duration: 2,
+      scrollTrigger: {
+        trigger: ".scroll-anim",
+        start: "top 100%",
+      },
     }
-  }
+  )
+  gsap.fromTo(
+    ".rotation-anim",
+    { x: "-=100", opacity: 0.3 },
+    {
+      x: 0,
+      opacity: 1,
+      duration: 2,
+      scrollTrigger: {
+        trigger: ".rotation-anim",
+        start: "top 100%",
+      },
+    }
+  )
+}
 
 
 const MouseMove = e => {
@@ -58,12 +50,9 @@ const MouseMove = e => {
 
 
 const ProjectsPart = () => {
+  
     useEffect(() => {
-        const elements = document.querySelectorAll(".scroll-anim")
-        elements.forEach(el => {
-          let dataAnimation = el.dataset.animation
-          themeAnimation(dataAnimation, el)
-        })
+       themeAnimation()
       })
 
     return(

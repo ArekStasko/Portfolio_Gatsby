@@ -1,11 +1,26 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { gsap } from "gsap"
 import "./AboutMePart.css"
 import { Link } from "gatsby"
 
-
 const AboutMePart = () => {
+
+  useEffect(()=>{
+    gsap.fromTo(
+      ".animated-text",
+      { y: "+=100", opacity: 0.3 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 2,
+        scrollTrigger: {
+          trigger: ".animated-text",
+          start: "top 100%",
+        },
+      }
+    )
+  })
 
   const mouseMove = e => {
     const tl = gsap.timeline()
@@ -22,8 +37,8 @@ const AboutMePart = () => {
         className="main_about-wrapper"
         to='/aboutMe'
       >
-        <h2>I love hard work</h2>
-        <p>
+        <h2 className='animated-text'>I love hard work</h2>
+        <p className='animated-text'>
           My main goal is to develop my skills and learn new ones, I try to
           devote as much time as possible to work and never leave unresolved
           problems
