@@ -44,10 +44,41 @@
     transform: scale(1.1);
 }
 
+.main_info-wrapper div:first-of-type{
+    display: flex;
+}
+
 .main_image-wrapper{
- width: 30%;
+ width: 60%;
  margin-right: 20px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
 } 
+
+.details-image{
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.info_back-link{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 60px;
+    font-size: 25px;
+    margin-right: 30px;
+}
+
+.info_back-link:hover{
+    transform: scale(1.1);
+}
    
 @media (max-width: 768px) {
     .main_info-container{

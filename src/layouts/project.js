@@ -1,6 +1,7 @@
-import React from "react"
-import { graphql } from "gatsby"
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import React, { useEffect } from "react"
+import { graphql, Link } from "gatsby"
+import { gsap } from "gsap"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import "../components/projects/project.css"
 
 export const query = graphql`
@@ -9,22 +10,14 @@ export const query = graphql`
       frontmatter {
         featuredImage {
           childImageSharp {
-            gatsbyImageData(
-                width: 550
-                placeholder: TRACED_SVG
-                quality: 100
-            )
+            gatsbyImageData(width: 550, placeholder: TRACED_SVG, quality: 100)
           }
         }
         detailsImage {
-            childImageSharp {
-              gatsbyImageData(
-                  width: 550
-                  placeholder: TRACED_SVG
-                  quality: 100
-              )
-            }
+          childImageSharp {
+            gatsbyImageData(width: 550, placeholder: TRACED_SVG, quality: 100)
           }
+        }
         slug
         title
         text
@@ -33,15 +26,52 @@ export const query = graphql`
   }
 `
 
+const SlideAnimation = () => {
+  gsap.fromTo(
+    ".main_info-wrapper",
+    { x: "-=100", opacity: 0.3 },
+    {
+      x: 0,
+      opacity: 1,
+      duration: 2,
+      scrollTrigger: {
+        trigger: ".main_info-wrapper",
+        start: "top 100%",
+      },
+    }
+  )
+  gsap.fromTo(
+    ".main_image-wrapper",
+    { x: "+=100", opacity: 0.3 },
+    {
+      x: 0,
+      opacity: 1,
+      duration: 2,
+      scrollTrigger: {
+        trigger: ".main_image-wrapper",
+        start: "top 100%",
+      },
+    }
+  )
+}
+
 const ProjectLayout = ({ data }) => {
-  
-const feturedImage = getImage(data.mdx.frontmatter.featuredImage)
-const detailsImage = getImage(data.mdx.frontmatter.detailsImage)
+  const feturedImage = getImage(data.mdx.frontmatter.featuredImage)
+  const detailsImage = getImage(data.mdx.frontmatter.detailsImage)
+
+  useEffect(() => {
+    SlideAnimation()
+  })
 
   return (
     <div className="main_info-container">
       <div className="main_info-wrapper">
-        <h1> {data.mdx.frontmatter.title} </h1>
+        <div>
+          <Link className="info_back-link" to="/projects">
+            &#8592;
+          </Link>
+          <h1> {data.mdx.frontmatter.title} </h1>
+        </div>
         <p> {data.mdx.frontmatter.text} </p>
         <div className="btn-wrapper">
           <a href="https://github.com/ArekStasko">Live</a>
@@ -49,8 +79,16 @@ const detailsImage = getImage(data.mdx.frontmatter.detailsImage)
         </div>
       </div>
       <div className="main_image-wrapper">
-      <GatsbyImage image={feturedImage} alt={data.mdx.frontmatter.title} />
-      <GatsbyImage image={detailsImage} alt={data.mdx.frontmatter.title} />
+        <GatsbyImage
+          className="details-image"
+          image={feturedImage}
+          alt={data.mdx.frontmatter.title}
+        />
+        <GatsbyImage
+          className="details-image"
+          image={detailsImage}
+          alt={data.mdx.frontmatter.title}
+        />
       </div>
     </div>
   )

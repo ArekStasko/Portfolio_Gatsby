@@ -1,5 +1,4 @@
 import React, { useEffect } from "react"
-import { StaticImage } from "gatsby-plugin-image"
 import { gsap } from "gsap"
 import { graphql, Link } from "gatsby"
 import styled from "styled-components"
