@@ -51,7 +51,7 @@ const AboutMePart = () => {
             quality="100"
             width={300}
             className='casual-photo'
-            src="../../assets/images/aboutAnim.png"
+            src="../../../assets/images/aboutAnim.png"
             alt="casual-photo"
           />
         </div>

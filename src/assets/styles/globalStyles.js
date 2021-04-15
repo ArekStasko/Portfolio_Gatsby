@@ -18,13 +18,21 @@ body{
    font-weight: 700;
    background-color: black;
    color: white;
+   cursor: none;
+   
 }
 
  button{
     background-color: white;
     border: none;
     outline: none;
+    cursor: none;
  }
+
+ a{
+    cursor: none;
+ }
+
 `
 
 export default GlobalStyle

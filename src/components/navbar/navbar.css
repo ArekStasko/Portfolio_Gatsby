@@ -21,6 +21,11 @@ transition: all 1s ease-out;
     font-weight: 100;
     top: 40px;
     left: 60px;
+    transition: all 400ms linear;
+}
+
+.initials_wrapper:hover{
+    transform: scale(1.1);
 }
 
 .initials_link{
@@ -105,6 +110,25 @@ transition: all 1s ease-out;
     justify-content: flex-end;
     font-size: 30px;
 }
+
+
+.bentoWrapper{
+width: 45px;
+height: 45px;
+position: fixed;
+}
+
+.bentoCol{
+display: flex;
+}
+
+.bentoDot {
+background-color: white;
+width: 4px;
+height: 4px;
+margin: 5px;
+}
+
 
 @media (max-width: 425px) {
     .navbar_link {

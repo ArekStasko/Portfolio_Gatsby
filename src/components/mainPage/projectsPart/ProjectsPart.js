@@ -17,7 +17,7 @@ const themeAnimation = () => {
       duration: 2,
       scrollTrigger: {
         trigger: ".scroll-anim",
-        start: "top 100%",
+        start: "top 90%",
       },
     }
   )
@@ -30,7 +30,7 @@ const themeAnimation = () => {
       duration: 2,
       scrollTrigger: {
         trigger: ".rotation-anim",
-        start: "top 100%",
+        start: "top 90%",
       },
     }
   )
@@ -50,7 +50,7 @@ const MouseMove = e => {
 
 
 const ProjectsPart = () => {
-  
+
     useEffect(() => {
        themeAnimation()
       })
@@ -71,7 +71,7 @@ const ProjectsPart = () => {
             placeholder="tracedSVG"
             className='rotation-anim portfolio_template'
             quality="100"
-            src="../../assets/images/portfolio_template.png"
+            src="../../../assets/images/portfolio_template.png"
             alt="project-photo"
           />
   <StaticImage
@@ -80,7 +80,7 @@ const ProjectsPart = () => {
             className='rotation-anim whats_matter'
             placeholder="tracedSVG"
             quality="100"
-            src="../../assets/images/whats_matter.png"
+            src="../../../assets/images/whats_matter.png"
             alt="project-photo"
 
           />
@@ -90,7 +90,7 @@ const ProjectsPart = () => {
             className='rotation-anim task_and_I'
             placeholder="tracedSVG"
             quality="100"
-            src="../../assets/images/task_and_I.png"
+            src="../../../assets/images/task_and_I.png"
             alt="project-photo"
           />
                 </div>

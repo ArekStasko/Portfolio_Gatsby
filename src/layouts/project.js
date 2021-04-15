@@ -74,8 +74,8 @@ const ProjectLayout = ({ data }) => {
         </div>
         <p> {data.mdx.frontmatter.text} </p>
         <div className="btn-wrapper">
-          <a href="https://github.com/ArekStasko">Live</a>
-          <a href="https://github.com/ArekStasko">Github</a>
+          <a className='link-element' href="https://github.com/ArekStasko">Live</a>
+          <a className='link-element' href="https://github.com/ArekStasko">Github</a>
         </div>
       </div>
       <div className="main_image-wrapper">

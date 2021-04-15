@@ -1,24 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
 
-const BentoWrapper = styled.div`
-cursor: pointer;
-width: 45px;
-height: 45px;
-position: fixed;
-`
-
-const BentoCol = styled.div`
-display: flex;
-`
-
-const BentoDot = styled.div`
-background-color: white;
-width: 4px;
-height: 4px;
-margin: 5px;
-`
-
 const TransitionDot = styled.div`
 transition: background-color 500ms ease-in-out;
 background-color: ${({show}) => (show  ? 'white' : '#202020')};
@@ -30,25 +12,25 @@ margin: 5px;
 const BentoIcon = ({show}) => {
 
     return(
-         <BentoWrapper>
-<BentoCol>
-<BentoDot></BentoDot>
+         <div className='bentoWrapper'>
+<div className='bentoCol'>
+<div className='bentoDot'></div>
 <TransitionDot show={show}></TransitionDot>
-<BentoDot></BentoDot>
-</BentoCol>
+<div className='bentoDot'></div>
+</div>
 
-<BentoCol>
+<div className='bentoCol'>
 <TransitionDot show={show} ></TransitionDot>
-<BentoDot></BentoDot>
+<div className='bentoDot'></div>
 <TransitionDot show={show} ></TransitionDot>
-</BentoCol>
+</div>
 
-<BentoCol>
-<BentoDot></BentoDot>
+<div className='bentoCol'>
+<div className='bentoDot'></div>
 <TransitionDot show={show} ></TransitionDot>
-<BentoDot></BentoDot>
-</BentoCol>
-         </BentoWrapper>
+<div className='bentoDot'></div>
+</div>
+         </div>
     )
 }
 

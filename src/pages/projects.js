@@ -30,7 +30,7 @@ const animationMove = (name, e) => {
 
 const ImageElement = styled.div`
   background-image: url(${({ background }) => background});
-  position: absolute;
+  position: fixed;
   visibility: hidden;
   z-index: -1;
   bottom: 500px;

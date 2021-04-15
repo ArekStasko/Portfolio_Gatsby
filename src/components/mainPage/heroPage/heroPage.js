@@ -84,7 +84,7 @@ const HeroPage = () => {
             quality="100"
             className="StyledHero"
             loading='eager'
-            src="../assets/images/hero.png"
+            src="../../../assets/images/hero.png"
             alt="hero"
           />
         </div>
@@ -96,7 +96,7 @@ const HeroPage = () => {
             quality="90"
             className="StyledImage"
             loading='eager'
-            src="../assets/images/golden_frame.png"
+            src="../../../assets/images/golden_frame.png"
             alt="frame"
           />
         </div>
