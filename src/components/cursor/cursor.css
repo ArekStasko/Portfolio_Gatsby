@@ -7,7 +7,18 @@ position: fixed;
 z-index: 6;
 pointer-events: none;
 cursor: none;
-background-color: rgba(0, 0, 0, 0.5);
+transition: all 200ms linear;
+}
+
+.cursor-pointer{
+    width: 5px;
+    height: 5px;
+    border-radius: 60px;
+    position: fixed;
+    z-index: 6;
+    pointer-events: none;
+    cursor: none;
+    background-color: white;
 }
 
 @media (max-width: 768px){

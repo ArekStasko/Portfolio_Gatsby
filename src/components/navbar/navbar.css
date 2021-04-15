@@ -54,7 +54,6 @@ transition: all 1s ease-out;
     top: 40px;
     left: 60px;
 }
-    
 
 .navbar_link-wrapper{
     width: 60%;
@@ -120,6 +119,7 @@ position: fixed;
 
 .bentoCol{
 display: flex;
+transition: all 300ms linear;
 }
 
 .bentoDot {
@@ -129,6 +129,9 @@ height: 4px;
 margin: 5px;
 }
 
+.bentoCol:hover{
+    transform: scale(1.2);
+}
 
 @media (max-width: 425px) {
     .navbar_link {
