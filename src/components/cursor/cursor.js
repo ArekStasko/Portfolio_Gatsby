@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { gsap } from "gsap"
 import './cursor.css'
 
@@ -16,7 +16,9 @@ const mouseMove = e => {
 
 const Cursor = () => {
 
-  window.addEventListener('mousemove', mouseMove)
+  useEffect(()=>{
+    window.addEventListener('mousemove', mouseMove)
+  })
 
     return(
       <>
