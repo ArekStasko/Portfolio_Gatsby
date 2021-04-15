@@ -40,8 +40,8 @@ const AboutMePart = () => {
         <h2 className='animated-text'>I love hard work</h2>
         <p className='animated-text'>
           My main goal is to develop my skills and learn new ones, I try to
-          devote as much time as possible to work and never leave unresolved
-          problems
+          devote as much time as possible for work and learn more and more
+          about programming technologies
         </p>
         <p> ( click on text to se more about me ) </p>
         <div className='hoverOnImage'>
