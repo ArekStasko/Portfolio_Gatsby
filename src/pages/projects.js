@@ -39,6 +39,10 @@ const ImageElement = styled.div`
   height: 200px;
   opacity: 0;
   transition: all 300ms linear;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `
 
 const ProjectWrapper = styled.div`

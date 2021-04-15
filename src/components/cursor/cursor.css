@@ -25,4 +25,8 @@ transition: all 200ms linear;
     .cursor-element{
         display: none;
     }
+
+    .cursor-pointer{
+        display: none;
+    }
 }
