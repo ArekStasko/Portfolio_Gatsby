@@ -45,6 +45,7 @@
 
 .main_info-wrapper div:first-of-type{
     display: flex;
+    margin-bottom: 30px;
 }
 
 .main_image-wrapper{

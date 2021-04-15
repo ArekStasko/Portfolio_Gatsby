@@ -21,6 +21,8 @@ export const query = graphql`
         slug
         title
         text
+        technologies
+        liveLink
       }
     }
   }
@@ -72,9 +74,10 @@ const ProjectLayout = ({ data }) => {
           </Link>
           <h1> {data.mdx.frontmatter.title} </h1>
         </div>
+        <h3>Technologies : {data.mdx.frontmatter.technologies}</h3>
         <p> {data.mdx.frontmatter.text} </p>
         <div className="btn-wrapper">
-          <a className='link-element' href="https://github.com/ArekStasko">Live</a>
+          <a className='link-element' href={data.mdx.frontmatter.liveLink}>Live</a>
           <a className='link-element' href="https://github.com/ArekStasko">Github</a>
         </div>
       </div>
