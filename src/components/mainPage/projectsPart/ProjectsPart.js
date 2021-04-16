@@ -84,7 +84,7 @@ const ProjectsPart = () => {
             className="rotation-anim task_and_I"
             placeholder="tracedSVG"
             quality="90"
-            src="../../../assets/images/task_and_I.png"
+            src="../../../assets/images/Task_and_I.png"
             alt="project-photo"
           />
         </div>
