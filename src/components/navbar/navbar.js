@@ -26,7 +26,7 @@ const handleClick = () => {
             <Link className='initials_link' to='/' >AS .</Link>
         </div>
         <div className='navbar-btn'>
-         <button className='btn-element' onClick={handleClick}><BentoIcon show={show}/></button>
+         <button onClick={handleClick} className='btn-element'><BentoIcon show={show}/></button>
          </div>
             <NavbarWrapper className='main_navbar-wrapper' show={show}>
                 <div className='navbar_link-wrapper' onClick={handleClick}>
