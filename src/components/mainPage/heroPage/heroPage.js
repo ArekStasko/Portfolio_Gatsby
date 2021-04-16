@@ -93,7 +93,7 @@ const HeroPage = () => {
             layout="constrained"
             width={350}
             placeholder="tracedSVG"
-            quality="90"
+            quality="80"
             className="StyledImage"
             loading='eager'
             src="../../../assets/images/golden_frame.png"

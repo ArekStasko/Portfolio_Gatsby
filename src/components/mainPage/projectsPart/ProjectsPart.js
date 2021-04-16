@@ -65,7 +65,7 @@ const ProjectsPart = () => {
             width={500}
             placeholder="tracedSVG"
             className="rotation-anim portfolio_template"
-            quality="100"
+            quality="90"
             src="../../../assets/images/portfolio_template.png"
             alt="project-photo"
           />
@@ -74,16 +74,16 @@ const ProjectsPart = () => {
             width={500}
             className="rotation-anim whats_matter"
             placeholder="tracedSVG"
-            quality="100"
+            quality="90"
             src="../../../assets/images/whats_matter.png"
             alt="project-photo"
           />
           <StaticImage
             layout="constrained"
-            width={450}
+            width={500}
             className="rotation-anim task_and_I"
             placeholder="tracedSVG"
-            quality="100"
+            quality="90"
             src="../../../assets/images/task_and_I.png"
             alt="project-photo"
           />
