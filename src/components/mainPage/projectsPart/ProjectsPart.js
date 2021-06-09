@@ -55,7 +55,7 @@ const ProjectsPart = () => {
   return (
     <div className="main_projects-container" onMouseMove={e => MouseMove(e)}>
       <div className="scroll-anim Projects-header" data-animation="1">
-        <h1>Hello, i'm Arek and i would like to introduce you myself</h1>
+        <h1>Cześć, Nazywam się Arek i chciałbym ci przedstawić moją osobę</h1>
       </div>
 
       <div className="Projects_main-wrapper">
@@ -91,11 +91,12 @@ const ProjectsPart = () => {
 
         <div className="scroll-anim Projects_description" data-animation="2">
           <h2>
-            I create most projects for my own use, so I always focus on rules
-            like do not repeat yourself, and i try to write as good code as possible
+            Większość projektów staram się tworzyć w taki sposób żeby były ciekawe i 
+            możliwe do praktycznego zastosowania, cały czas się uczę i staram się programować
+            według takich zasad jak dry czy kiss.
           </h2>
           <Link to="/projects" className="projects-link">
-            See all projects &#10; &#x02192;
+            Zobacz wszystkie projekty &#10; &#x02192;
           </Link>
         </div>
       </div>

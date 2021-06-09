@@ -31,21 +31,20 @@ const AboutMeText = () => {
         </Link>
       <h1>Hello,</h1>
       <p>
-        My name is Arek Staśko, I am 18 years old, I have been learning
-        JavaScript language for two years, which has become from interest to
-        daily routine, what's more the possibility of working with more
-        experienced programmers is my dream.
+       Nazywam się Arek i mam 18 lat, języka JavaScript uczę się od dwóch lat, i chciałbym
+       rozwijać się w kierunku frontend developera. 
       </p>
       <p>
-        The most important thing for me is the opportunity to gain experience
-        and knowledge as well as the develop into my skills. I learned at a
-        military high school, thanks to which I am disciplined and my superiors
-        are my authority. I am going to study computer science in the near
-        future.
+        Aktualnie najważniejsze dla mnie jest zdobycie doświadczenia i możliwość rozwoju
+        w celu lepszego poznania technologii, które już znam oraz nauki nowych. Jestem otwarty
+        a nawet chętny na naukę innych technologii nie tylko frontendowych. W wolnym czasie zainteresowałem
+        się tworzeniem prostych robotów programowanych językiem JS (wykorzystuje platformę Johny-Five z płytkami
+        Arduino) jednak jest to jedynie hobby, swoje zainteresowania chciałbym poszerzyć w przyszłości o bezpieczeństwo
+        w sieci.  
       </p>
       <p>
-        I learned JavaScript from foreign courses and by reading documentation
-        (for example mdn) and by carrying out projects.
+        Języka JavaScript i technologii z nim związanych uczę się z oficjalnych dokumentacji oraz
+        materiałów na takich platformach jak udemy, youtube, eduweb.
       </p>
     </div>
   )
