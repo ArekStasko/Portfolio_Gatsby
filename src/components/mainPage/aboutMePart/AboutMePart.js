@@ -39,11 +39,11 @@ const AboutMePart = () => {
       >
         <h2 className='animated-text'>I love hard work</h2>
         <p className='animated-text'>
-          My main goal is to develop my skills and learn new ones, I try to
-          devote as much time as possible for work and learn more and more
-          about programming technologies
+          Moim celem jest rozwijać moje umiejętności i uczyć się nowych rzeczy,
+          staram się poświęcaj jak najwięcej czasu na pracę i szlifowanie
+          już poznanych technologii a także poznawanie nowych.
         </p>
-        <p> ( click on text to se more about me ) </p>
+        <p> ( Kliknij żeby zobaczyć więcej o mnie ) </p>
         <div className='hoverOnImage'>
           <StaticImage
             layout="constrained"

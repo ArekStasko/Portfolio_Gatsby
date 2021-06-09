@@ -106,9 +106,9 @@ const HeroPage = () => {
         </div>
 
         <div className="main_text-wrapper">
-          <p>(ABOUT.)</p>
-          <p>JUNIOR FRONTEND DEVELOPER FROM POLAND,</p>
-          <p>LIVE IN CRACOW</p>
+          <p>(O MNIE.)</p>
+          <p>JUNIOR FRONTEND DEVELOPER Z POLSKI,</p>
+          <p>ZAMIESZKANIE W KRAKOWIE</p>
         </div>
       </Wrapper>
     </>
