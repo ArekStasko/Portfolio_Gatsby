@@ -96,7 +96,7 @@ const ProjectsPart = () => {
             według takich zasad jak dry czy kiss.
           </h2>
           <Link to="/projects" className="projects-link">
-            Zobacz wszystkie projekty &#10; &#x02192;
+            Wszystkie projekty &#10; &#x02192;
           </Link>
         </div>
       </div>

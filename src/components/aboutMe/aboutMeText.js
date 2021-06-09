@@ -29,7 +29,7 @@ const AboutMeText = () => {
        <Link className="info_back-link" to="/">
             &#8592;
         </Link>
-      <h1>Hello,</h1>
+      <h1>Cześć,</h1>
       <p>
        Nazywam się Arek i mam 18 lat, języka JavaScript uczę się od dwóch lat, i chciałbym
        rozwijać się w kierunku frontend developera. 
