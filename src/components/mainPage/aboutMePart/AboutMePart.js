@@ -37,7 +37,7 @@ const AboutMePart = () => {
         className="main_about-wrapper"
         to='/aboutMe'
       >
-        <h2 className='animated-text'>I love hard work</h2>
+        <h2 className='animated-text'>Coś o mnie</h2>
         <p className='animated-text'>
           Moim celem jest rozwijać moje umiejętności i uczyć się nowych rzeczy,
           staram się poświęcaj jak najwięcej czasu na pracę i szlifowanie
