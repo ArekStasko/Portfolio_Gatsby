@@ -1,0 +1,17 @@
+@import '../../mixins.scss';
+@import '../../normalize.scss';
+@import '../../variables.scss';
+
+/* components imports */
+
+
+@import './components/aboutMe.scss';
+@import './components/cursor.scss';
+@import './components/mainPage/aboutMe.scss';
+@import './components/mainPage/projects.scss';
+@import './components/mainPage/hero.scss';
+@import './components/footer.scss';
+@import './components/navbar.scss';
+@import './components/projects/projectsPage.scss';
+@import './components/projects/singleProject.scss';
+

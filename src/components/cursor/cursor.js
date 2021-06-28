@@ -1,13 +1,12 @@
 import React, {useEffect} from 'react'
 import { gsap } from "gsap"
-import './cursor.css'
 
 const mouseMove = e => {
-    gsap.to(".cursor-element", {
+    gsap.to(".cursor", {
       translateX: e.clientX - 20 + "px",
       translateY: e.clientY - 20 + "px",
     })
-    gsap.to(".cursor-pointer", {
+    gsap.to(".cursor__pointer", {
       translateX: e.clientX + 5 + "px",
       translateY: e.clientY + 5 + "px",
     })
@@ -22,9 +21,9 @@ const Cursor = () => {
 
     return(
       <>
-        <div className='cursor-element'>
+        <div className='cursor'>
         </div>
-        <div className='cursor-pointer'></div>
+        <div className='cursor__pointer'></div>
       </>
     )
 }

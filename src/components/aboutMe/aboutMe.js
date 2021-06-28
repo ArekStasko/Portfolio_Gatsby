@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import { gsap } from "gsap"
 import { StaticImage } from "gatsby-plugin-image"
-import './aboutMe.css'
 
 const SlideAnimation = () => {
   gsap.fromTo(
