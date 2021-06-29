@@ -1,7 +1,6 @@
 import React, { useEffect } from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { gsap } from "gsap"
-import "./AboutMePart.css"
 import { Link } from "gatsby"
 
 const AboutMePart = () => {
@@ -28,13 +27,13 @@ const AboutMePart = () => {
       translateX: e.clientX - 80 + "px",
       translateY: e.clientY - 100 + "px",
     })
-  }
+  } 
 
   return (
-    <div className="main_about-container">
+    <div className="aboutMe">
       <Link
         onMouseMove={e => (mouseMove(e))}
-        className="main_about-wrapper"
+        className="aboutMe__wrapper"
         to='/aboutMe'
       >
         <h2 className='animated-text'>Coś o mnie</h2>
@@ -44,7 +43,7 @@ const AboutMePart = () => {
           już poznanych technologii a także poznawanie nowych.
         </p>
         <p> ( Kliknij żeby zobaczyć więcej o mnie ) </p>
-        <div className='hoverOnImage'>
+        <div className='aboutMe__wrapper--hoverImg hoverOnImage'>
           <StaticImage
             layout="constrained"
             placeholder="tracedSVG"

@@ -12,23 +12,23 @@ margin: 5px;
 const BentoIcon = ({show}) => {
 
     return(
-         <div className='bentoWrapper'>
-<div className='bentoCol'>
-<div className='bentoDot'></div>
+         <div className='bento'>
+<div className='bento__Col'>
+<div className='bento__Col--Dot'></div>
 <TransitionDot show={show}></TransitionDot>
-<div className='bentoDot'></div>
+<div className='bento__Col--Dot'></div>
 </div>
 
-<div className='bentoCol'>
+<div className='bento__Col'>
 <TransitionDot show={show} ></TransitionDot>
-<div className='bentoDot'></div>
+<div className='bento__Col--Dot'></div>
 <TransitionDot show={show} ></TransitionDot>
 </div>
 
-<div className='bentoCol'>
-<div className='bentoDot'></div>
+<div className='bento__Col'>
+<div className='bento__Col--Dot'></div>
 <TransitionDot show={show} ></TransitionDot>
-<div className='bentoDot'></div>
+<div className='bento__Col--Dot'></div>
 </div>
          </div>
     )

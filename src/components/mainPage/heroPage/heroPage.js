@@ -3,7 +3,6 @@ import { StaticImage } from "gatsby-plugin-image"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import styled from "styled-components"
-import './heroPage.css'
 
 gsap.registerPlugin(ScrollTrigger)
 

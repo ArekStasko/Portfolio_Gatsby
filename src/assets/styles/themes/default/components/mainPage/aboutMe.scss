@@ -1,0 +1,129 @@
+.aboutMe{
+    margin-top: 150px;
+    margin-bottom: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover &__wrapper--hoverImg{
+        visibility: visible;
+        opacity: 1;
+        }
+    
+&__wrapper{
+    display: block;
+    align-items: center;
+    width: 60%;
+    margin: 30px;
+    transition: all 1s ease;
+    text-decoration: none;
+    color: white;
+
+    &--hoverImg{
+        position: fixed;
+        visibility: hidden;
+        opacity: 0;
+        z-index: -1;
+        bottom: 500px;
+        left: -50px;
+        transition: all 300ms linear;
+    }
+
+    h2 {
+        font-size: 50px;
+    }
+
+    p:first-of-type {
+        font-size: 45px;
+        letter-spacing: 3px;
+        word-spacing: 3px;
+        font-weight: 100;
+    }
+
+    p:last-of-type {
+        display: none;
+        font-size: 15px;
+        letter-spacing: 3px;
+        word-spacing: 3px;
+        font-weight: 100;
+    }
+}
+
+.mobile_about-link {
+    background-color: #002020;
+    border: 2px solid black;
+    border-radius: 100px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    width: 200px;
+    height: 50px;
+    margin-top: 20px;
+    transition: all 1s ease;
+    font-size: 13px;
+    text-decoration: none;
+    color: white;
+}
+}
+
+@media (min-height: 800px){
+    .aboutMe{     
+    &__wrapper{
+        &--hoverImg{
+        bottom: 700px;
+        }
+    }
+  } 
+}
+
+@media (max-width: 590px){
+    .aboutMe{     
+        &__wrapper{
+            &--hoverImg{
+       display: none;
+            }
+        }
+
+        .mobile_about-link {
+            display: flex;
+        }
+
+        p:last-of-type {
+            display: initial;
+         }
+
+         p:first-of-type {
+            font-size: 25px;
+         }
+      }
+}
+
+
+@media (min-width: 590px){
+    .aboutMe{
+
+       h2 {
+        font-size: 65px;
+       }
+
+       p {
+        font-size: 40px;
+       }
+    }
+}
+
+@media (min-width: 900px){
+    .aboutMe{
+
+        h2 {
+            font-size: 85px;
+        }
+
+        p {
+        font-size: 50px;
+    }
+    }
+    
+}
