@@ -2,7 +2,6 @@ import React, { useEffect } from "react"
 import { gsap } from "gsap"
 import { graphql, Link } from "gatsby"
 import styled from "styled-components"
-import "../components/projects/projects.css"
 
 const themeAnimation = () => {
   gsap.fromTo(
@@ -62,8 +61,8 @@ const Projects = ({ data }) => {
   })
 
   return (
-    <div className="projects-container">
-      <div className="projects-wrapper">
+    <div className="projects projects-container">
+      <div className="projects__wrapper">
         {data.allMdx.nodes.map(item => {
           const imageClass = "." + item.frontmatter.slug
           const title = item.frontmatter.title
@@ -73,11 +72,11 @@ const Projects = ({ data }) => {
             <ProjectWrapper
               key={item.frontmatter.slug}
               onMouseMove={e => animationMove(imageClass, e)}
-              className="project"
+              className="projects__wrapper__project"
             >
               <Link
                 to={`/projects/${item.frontmatter.slug}`}
-                className="project-link"
+                className="projects__wrapper__project--link"
               >
                 {firstLetter}
               </Link>
