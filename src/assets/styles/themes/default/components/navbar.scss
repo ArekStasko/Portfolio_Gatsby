@@ -3,26 +3,22 @@
   z-index: 3;
   top: 0;
   right: 0;
-  width: 100%;
+  width: $wrapper-full;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  @include createFlex(flex, space-around, center, column);
   color: white;
-  background-color: #202020;
+  background-color: $c-black;
   transition: all 1s ease-out;
 
   &__links {
-    width: 60%;
-    display: flex;
+    width: $wrapper-m;
     flex-wrap: wrap;
-    justify-content: space-around;
+    @include createFlex(flex, space-around);
     margin: 200px auto;
 
     &--link {
       position: relative;
-      font-size: 80px;
+      font-size: pxToRem(80);
       text-decoration: none;
       color: white;
       margin: 10px;
@@ -30,7 +26,7 @@
       &::before {
         content: "";
         position: absolute;
-        width: 100%;
+        width: $wrapper-full;
         height: 5px;
         bottom: -10px;
         left: 0;
@@ -48,23 +44,20 @@
   }
 
   &__footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+    @include createFlex(flex, null, center, column);
+    width: $wrapper-full;
 
     &--line {
-      width: 80%;
+      width: $wrapper-xl;
       height: 1px;
       background-color: white;
       margin-bottom: 10px;
     }
 
     &--date {
-      width: 80%;
-      display: flex;
-      justify-content: flex-end;
-      font-size: 30px;
+      width: $wrapper-xl;
+      @include createFlex(flex, flex-end);
+      font-size: pxToRem(30);
     }
   }
 }
@@ -83,7 +76,7 @@
   }
 
   &__link {
-    font-size: 30px;
+    font-size: pxToRem(30);
     text-decoration: none;
     color: white;
   }
@@ -92,9 +85,7 @@
 .navbar-btn {
   position: fixed;
   perspective: 1000px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include createFlex(flex, center, center);
   z-index: 4;
   top: 0;
   right: 40px;
@@ -133,6 +124,6 @@
 
 @media (max-width: 425px) {
   .navbar_link {
-    font-size: 50px;
+    font-size: pxToRem(50);
   }
 }

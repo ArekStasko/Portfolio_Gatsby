@@ -1,5 +1,5 @@
 .projects {
-  max-width: 100%;
+  max-width: $wrapper-full;
   margin-top: 0;
   display: flex;
   flex-direction: column;
@@ -7,7 +7,7 @@
   align-items: center;
 
   &__wrapper {
-    width: 60%;
+    width: $wrapper-m;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -22,7 +22,7 @@
       &--link {
         font-family: Tangerine;
         font-weight: 100;
-        font-size: 150px;
+        font-size: pxToRem(150);
         text-decoration: none;
         color: white;
       }
@@ -41,7 +41,7 @@
         margin: 100px 50px 50px 50px;
 
         &--link {
-          font-size: 90px;
+          font-size: pxToRem(90);
         }
 
         p {
@@ -59,7 +59,7 @@
         margin: 150px 50px 50px 50px;
 
         &--link {
-          font-size: 50px;
+          font-size: pxToRem(50);
         }
       }
     }

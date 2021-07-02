@@ -25,7 +25,7 @@ const AboutMeText = () => {
 
   return (
     <div className="about__wrapper">
-       <Link className="info_back-link" to="/">
+       <Link className="about__wrapper--back" to="/">
             &#8592;
         </Link>
       <h1>Cześć,</h1>

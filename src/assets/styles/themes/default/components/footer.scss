@@ -1,15 +1,13 @@
 .footer{
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
     align-self: center;
-    width: 100%;
+    @include createFlex(flex, center, null, column-reverse);
+    width: $wrapper-full;
     height: 300px;
     background-color: #101010;
     margin-top: 100px;
 
     div:last-of-type{
-        font-size: 100px;
+        font-size: pxToRem(100);
         font-family: Tangerine;
         font-weight: 100;
         justify-self: center;

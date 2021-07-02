@@ -1,14 +1,11 @@
 .projects {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: space-evenly;
+  width: $wrapper-full;
+  @include createFlex(flex, space-evenly, center, column);
   margin-top: 300px;
 
   &--header {
     width: 70%;
-    font-size: 20px;
+    font-size: pxToRem(20);
   }
 
   &__wrapper {
@@ -17,37 +14,30 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    @include createFlex(flex, space-between, null, column);
 
     &--photos {
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      align-items: center;
+      @include createFlex(flex, center, center, column);
     }
 
     &--description {
-      width: 100%;
+      width: $wrapper-full;
       margin-top: 50px;
-      font-size: 15px;
+      font-size: pxToRem(15);
       align-self: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      align-items: center;
+      @include createFlex(flex, space-evenly, center, column);
 
       &--link {
-        background-color: #202020;
-        border: 2px solid #002020;
+        background-color: $c-black;
+        border: 2px solid $c-black-light;
         border-radius: 100px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         align-self: center;
+        @include createFlex(flex, center, center);
         width: 200px;
         height: 50px;
         margin-top: 20px;
         transition: all 1s ease;
-        font-size: 13px;
+        font-size: pxToRem(13);
         text-decoration: none;
         color: white;
 
@@ -65,7 +55,7 @@
   border-radius: 10px;
   perspective: 1000px;
   margin-top: 20px;
-  box-shadow: 0px 2px 30px 11px rgba(0, 0, 0, 0.7);
+  box-shadow:$space-zero 2px 30px 11px rgba(0, 0, 0, 0.7);
   max-width: 500px;
 }
 
@@ -75,7 +65,7 @@
 
     &--header {
       width: 45%;
-      font-size: 30px;
+      font-size: pxToRem(30);
     }
 
     &__wrapper {
@@ -84,7 +74,7 @@
       &--description {
         margin-top: 330px;
         margin-bottom: 20px;
-        font-size: 20px;
+        font-size: pxToRem(20);
       }
     }
   }
@@ -99,9 +89,9 @@
         flex-direction: row;
 
       &--description {
-        width: 50%;
+        width: $wrapper;
         margin-bottom: 150px;
-        font-size: 20px;
+        font-size: pxToRem(20);
       }
     }
   }

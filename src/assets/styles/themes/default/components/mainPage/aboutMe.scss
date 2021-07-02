@@ -1,7 +1,8 @@
 .aboutMe{
     margin-top: 150px;
     margin-bottom: 150px;
-    width: 100%;
+    width: $wrapper-full;
+    @include createFlex(flex, center, center);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,7 +15,7 @@
 &__wrapper{
     display: block;
     align-items: center;
-    width: 60%;
+    width: $wrapper-m;
     margin: 30px;
     transition: all 1s ease;
     text-decoration: none;
@@ -31,11 +32,11 @@
     }
 
     h2 {
-        font-size: 50px;
+        font-size: pxToRem(50);
     }
 
     p:first-of-type {
-        font-size: 45px;
+        font-size: pxToRem(45);
         letter-spacing: 3px;
         word-spacing: 3px;
         font-weight: 100;
@@ -43,7 +44,7 @@
 
     p:last-of-type {
         display: none;
-        font-size: 15px;
+        font-size: pxToRem(15);
         letter-spacing: 3px;
         word-spacing: 3px;
         font-weight: 100;
@@ -51,8 +52,8 @@
 }
 
 .mobile_about-link {
-    background-color: #002020;
-    border: 2px solid black;
+    background-color: $c-black-light;
+    border: 2px solid $c-black;
     border-radius: 100px;
     display: none;
     align-items: center;
@@ -62,7 +63,7 @@
     height: 50px;
     margin-top: 20px;
     transition: all 1s ease;
-    font-size: 13px;
+    font-size: pxToRem(13);
     text-decoration: none;
     color: white;
 }
@@ -95,7 +96,7 @@
          }
 
          p:first-of-type {
-            font-size: 25px;
+            font-size: pxToRem(25);
          }
       }
 }
@@ -105,11 +106,11 @@
     .aboutMe{
 
        h2 {
-        font-size: 65px;
+        font-size: pxToRem(65);
        }
 
        p {
-        font-size: 40px;
+        font-size: pxToRem(40);
        }
     }
 }
@@ -118,11 +119,11 @@
     .aboutMe{
 
         h2 {
-            font-size: 85px;
+            font-size: pxToRem(85);
         }
 
         p {
-        font-size: 50px;
+        font-size: pxToRem(50);
     }
     }
     
