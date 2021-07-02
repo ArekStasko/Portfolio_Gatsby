@@ -25,10 +25,10 @@ const handleClick = () => {
             <Link className='initials__link' to='/' >AS .</Link>
         </div>
         <div className='navbar-btn'>
-         <button onClick={handleClick} className='navbar-btn__btn'><BentoIcon show={show}/></button>
+         <button  onClick={handleClick} className='navbar-btn__btn'><BentoIcon show={show}/></button>
          </div>
             <NavbarWrapper className='navbar' show={show}>
-                <div className='navbar__links' onClick={handleClick}>
+                <div className='navbar__links' role="button" tabIndex={0} onKeyDown={handleClick} onClick={handleClick}>
                <Link to='/aboutMe' className='navbar__links--link'>ABOUT</Link>
                <Link to='/projects' className='navbar__links--link'>PROJECTS</Link>
                </div>

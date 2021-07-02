@@ -9,7 +9,7 @@
     div:last-of-type{
         font-size: pxToRem(100);
         font-family: Tangerine;
-        font-weight: 100;
+        font-weight: $f-weight-xs;
         justify-self: center;
         align-self: center;
     }
@@ -19,7 +19,7 @@
         align-self: center;
         text-align: center;
         margin-top: 20px;
-        font-weight: 100;
+        font-weight: $f-weight-xs;
     }
 
     div:first-of-type p{

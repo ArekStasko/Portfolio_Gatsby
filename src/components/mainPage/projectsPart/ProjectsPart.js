@@ -52,7 +52,7 @@ const ProjectsPart = () => {
   })
 
   return (
-    <div className="projects" onMouseMove={e => MouseMove(e)}>
+    <div className="projects" role="button" tabIndex={0} onMouseMove={e => MouseMove(e)}>
       <div className="scroll-anim projects--header" data-animation="1">
         <h1>Cześć, Nazywam się Arek i chciałbym ci przedstawić moją osobę</h1>
       </div>

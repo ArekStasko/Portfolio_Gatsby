@@ -39,7 +39,7 @@
         font-size: pxToRem(45);
         letter-spacing: 3px;
         word-spacing: 3px;
-        font-weight: 100;
+        font-weight: $f-weight-xs;
     }
 
     p:last-of-type {
@@ -47,7 +47,7 @@
         font-size: pxToRem(15);
         letter-spacing: 3px;
         word-spacing: 3px;
-        font-weight: 100;
+        font-weight: $f-weight-xs;
     }
 }
 
