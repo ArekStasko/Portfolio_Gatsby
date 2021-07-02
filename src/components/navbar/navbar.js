@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
-import './navbar.css'
 
 import BentoIcon from './bentoIcon'
 
@@ -22,21 +21,21 @@ const handleClick = () => {
 
     return(
         <>
-        <div className='initials_wrapper'>
-            <Link className='initials_link' to='/' >AS .</Link>
+        <div className='initials'>
+            <Link className='initials__link' to='/' >AS .</Link>
         </div>
         <div className='navbar-btn'>
-         <button onClick={handleClick} className='btn-element'><BentoIcon show={show}/></button>
+         <button  onClick={handleClick} className='navbar-btn__btn'><BentoIcon show={show}/></button>
          </div>
-            <NavbarWrapper className='main_navbar-wrapper' show={show}>
-                <div className='navbar_link-wrapper' onClick={handleClick}>
-               <Link to='/aboutMe' className='navbar_link'>ABOUT</Link>
-               <Link to='/projects' className='navbar_link'>PROJECTS</Link>
+            <NavbarWrapper className='navbar' show={show}>
+                <div className='navbar__links' role="button" tabIndex={0} onKeyDown={handleClick} onClick={handleClick}>
+               <Link to='/aboutMe' className='navbar__links--link'>ABOUT</Link>
+               <Link to='/projects' className='navbar__links--link'>PROJECTS</Link>
                </div>
 
-               <div className='nav_footer-wrapper'>
-                <div className='nav_footer'></div>
-                <div className='nav_date'>
+               <div className='navbar__footer'>
+                <div className='navbar__footer--line'></div>
+                <div className='navbar__footer--date'>
                     <p>2021</p>
                 </div>
                 </div>

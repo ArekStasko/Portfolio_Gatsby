@@ -2,7 +2,6 @@ import React, { useEffect } from "react"
 import { graphql, Link } from "gatsby"
 import { gsap } from "gsap"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import "../components/projects/project.css"
 
 export const query = graphql`
   query queryProject($slug: String!) {
@@ -30,27 +29,27 @@ export const query = graphql`
 
 const SlideAnimation = () => {
   gsap.fromTo(
-    ".main_info-wrapper",
+    ".project-info",
     { x: "-=100", opacity: 0.3 },
     {
       x: 0,
       opacity: 1,
       duration: 2,
       scrollTrigger: {
-        trigger: ".main_info-wrapper",
+        trigger: ".project-info",
         start: "top 100%",
       },
     }
   )
   gsap.fromTo(
-    ".main_image-wrapper",
+    ".image-wrapper",
     { x: "+=100", opacity: 0.3 },
     {
       x: 0,
       opacity: 1,
       duration: 2,
       scrollTrigger: {
-        trigger: ".main_image-wrapper",
+        trigger: ".image-wrapper",
         start: "top 100%",
       },
     }
@@ -66,29 +65,29 @@ const ProjectLayout = ({ data }) => {
   })
 
   return (
-    <div className="main_info-container">
-      <div className="main_info-wrapper">
+    <div className="project">
+      <div className="project__wrapper project-info">
         <div>
-          <Link className="info_back-link" to="/projects">
+          <Link className="project__wrapper--link" to="/projects">
             &#8592;
           </Link>
           <h1> {data.mdx.frontmatter.title} </h1>
         </div>
         <h3>Technologies : {data.mdx.frontmatter.technologies}</h3>
         <p> {data.mdx.frontmatter.text} </p>
-        <div className="btn-wrapper">
+        <div className="project__wrapper--btn">
           <a className='link-element' href={data.mdx.frontmatter.liveLink}>Live</a>
           <a className='link-element' href="https://github.com/ArekStasko">Github</a>
         </div>
       </div>
-      <div className="main_image-wrapper">
+      <div className="project__images image-wrapper">
         <GatsbyImage
-          className="details-image"
+          className="project__images--details"
           image={feturedImage}
           alt={data.mdx.frontmatter.title}
         />
         <GatsbyImage
-          className="details-image"
+          className="project__images--details"
           image={detailsImage}
           alt={data.mdx.frontmatter.title}
         />

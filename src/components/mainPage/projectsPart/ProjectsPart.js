@@ -2,7 +2,6 @@ import React, { useEffect } from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import "./ProjectsPart.css"
 import { Link } from "gatsby"
 
 gsap.registerPlugin(ScrollTrigger)
@@ -10,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger)
 const themeAnimation = () => {
   gsap.fromTo(
     ".scroll-anim",
-    { x: "+=100", opacity: 0.3 },
+    { x: "+=100", opacity: 0.3 }, 
     {
       x: 0,
       opacity: 1,
@@ -53,13 +52,13 @@ const ProjectsPart = () => {
   })
 
   return (
-    <div className="main_projects-container" onMouseMove={e => MouseMove(e)}>
-      <div className="scroll-anim Projects-header" data-animation="1">
+    <div className="projects" role="button" tabIndex={0} onMouseMove={e => MouseMove(e)}>
+      <div className="scroll-anim projects--header" data-animation="1">
         <h1>Cześć, Nazywam się Arek i chciałbym ci przedstawić moją osobę</h1>
       </div>
 
-      <div className="Projects_main-wrapper">
-        <div className="Projects_photos">
+      <div className="projects__wrapper">
+        <div className="projects__wrapper--photos">
           <StaticImage
             layout="constrained"
             width={500}
@@ -89,13 +88,13 @@ const ProjectsPart = () => {
           />
         </div>
 
-        <div className="scroll-anim Projects_description" data-animation="2">
+        <div className="scroll-anim projects__wrapper--description" data-animation="2">
           <h2>
             Większość projektów staram się tworzyć w taki sposób żeby były ciekawe i 
             możliwe do praktycznego zastosowania, cały czas się uczę i staram się programować
             według takich zasad jak dry czy kiss.
           </h2>
-          <Link to="/projects" className="projects-link">
+          <Link to="/projects" className="projects__wrapper--description--link">
             Wszystkie projekty &#10; &#x02192;
           </Link>
         </div>

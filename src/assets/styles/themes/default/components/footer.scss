@@ -1,0 +1,28 @@
+.footer{
+    align-self: center;
+    @include createFlex(flex, center, null, column-reverse);
+    width: $wrapper-full;
+    height: 300px;
+    background-color: #101010;
+    margin-top: 100px;
+
+    div:last-of-type{
+        font-size: pxToRem(100);
+        font-family: Tangerine;
+        font-weight: $f-weight-xs;
+        justify-self: center;
+        align-self: center;
+    }
+
+    div:first-of-type{
+        justify-self: center;
+        align-self: center;
+        text-align: center;
+        margin-top: 20px;
+        font-weight: $f-weight-xs;
+    }
+
+    div:first-of-type p{
+        margin-top: 10px;
+    }
+} 

@@ -5,7 +5,7 @@ import AboutMeText from '../components/aboutMe/aboutMeText'
 const AboutMe = () => {
 
     return(
-        <div className='about_container'>
+        <div className='about'>
             <AboutMeImages/>
             <AboutMeText />
         </div>

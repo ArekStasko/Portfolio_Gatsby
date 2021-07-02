@@ -1,0 +1,98 @@
+.projects {
+  width: $wrapper-full;
+  @include createFlex(flex, space-evenly, center, column);
+  margin-top: 300px;
+
+  &--header {
+    width: 70%;
+    font-size: pxToRem(20);
+  }
+
+  &__wrapper {
+    margin-top: 80px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include createFlex(flex, space-between, null, column);
+
+    &--photos {
+      @include createFlex(flex, center, center, column);
+    }
+
+    &--description {
+      width: $wrapper-full;
+      margin-top: 50px;
+      font-size: pxToRem(15);
+      align-self: center;
+      @include createFlex(flex, space-evenly, center, column);
+
+      &--link {
+        background-color: $c-black;
+        border: 2px solid $c-black-light;
+        border-radius: 100px;
+        align-self: center;
+        @include createFlex(flex, center, center);
+        width: 200px;
+        height: 50px;
+        margin-top: 20px;
+        transition: all 1s ease;
+        font-size: pxToRem(13);
+        text-decoration: none;
+        color: white;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+
+.portfolio_template,
+.whats_matter,
+.task_and_I {
+  border-radius: 10px;
+  perspective: 1000px;
+  margin-top: 20px;
+  box-shadow:$space-zero 2px 30px 11px rgba(0, 0, 0, 0.7);
+  max-width: 500px;
+}
+
+@media (min-width: 768px) {
+  .projects {
+    margin-top: 300px;
+
+    &--header {
+      width: 45%;
+      font-size: pxToRem(30);
+    }
+
+    &__wrapper {
+      margin-top: 500px;
+
+      &--description {
+        margin-top: 330px;
+        margin-bottom: 20px;
+        font-size: pxToRem(20);
+      }
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+
+  .projects {
+    &__wrapper {
+        margin-top: 50px;
+        width: 70%;
+        flex-direction: row;
+
+      &--description {
+        width: $wrapper;
+        margin-bottom: 150px;
+        font-size: pxToRem(20);
+      }
+    }
+  }
+}

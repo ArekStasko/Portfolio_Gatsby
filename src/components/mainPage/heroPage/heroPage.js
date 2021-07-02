@@ -3,7 +3,6 @@ import { StaticImage } from "gatsby-plugin-image"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import styled from "styled-components"
-import './heroPage.css'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -75,37 +74,37 @@ const HeroPage = () => {
 
   return (
     <>
-      <Wrapper className="scrollWrapper" onMouseMove={e => MouseMove(e)}>
-        <div className="hero" data-animation="2">
+      <Wrapper className="hero" onMouseMove={e => MouseMove(e)}>
+        <div className="hero__photo" data-animation="2">
           <StaticImage
             layout="constrained"
             width={250}
             placeholder="tracedSVG"
             quality="100"
-            className="StyledHero"
+            className="hero__photo--heroPhoto"
             loading='eager'
             src="../../../assets/images/hero.png"
             alt="hero"
           />
         </div>
-        <div className="hero" data-animation="1">
+        <div className="hero__wrapper" data-animation="1">
           <StaticImage
             layout="constrained"
             width={350}
             placeholder="tracedSVG"
             quality="80"
-            className="StyledImage"
+            className="hero__wrapper--borderImage StyledImage"
             loading='eager'
             src="../../../assets/images/golden_frame.png"
             alt="frame"
           />
         </div>
 
-        <div className='side_sentence'>
+        <div className='hero__wrapper--sentence'>
           <h2>FRONTEND</h2>
         </div>
-
-        <div className="main_text-wrapper">
+ 
+        <div className="hero__wrapper--text">
           <p>(O MNIE.)</p>
           <p>JUNIOR FRONTEND DEVELOPER Z POLSKI,</p>
           <p>ZAMIESZKANIE W KRAKOWIE</p>
@@ -113,6 +112,8 @@ const HeroPage = () => {
       </Wrapper>
     </>
   )
+
+  
 }
 
 export default HeroPage

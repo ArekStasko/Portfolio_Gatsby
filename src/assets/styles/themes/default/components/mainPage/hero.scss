@@ -1,0 +1,77 @@
+.hero {
+  &__photo {
+    position: absolute;
+    perspective: 1000px;
+    margin-bottom: 0;
+
+    &--heroPhoto {
+      margin: 80px;
+      opacity: 0.9;
+    }
+  }
+
+  &__wrapper {
+    position: absolute;
+    perspective: 1000px;
+    margin-bottom: 100px;
+
+    &--borderImage {
+      margin: 50px;
+      box-shadow:$space-zero 2px 30px 11px rgba(0, 0, 0, 0.7);
+    }
+
+    &--sentence {
+      display: none;
+      letter-spacing: 5px;
+    }
+
+    &--text {
+      text-align: center;
+      margin-top: 550px;
+      font-weight: $f-weight-xs;
+
+      &:nth-child(2) {
+        margin-top: 20px;
+      }
+
+      &:nth-child(3) {
+        margin-top: 5px;
+      }
+    }
+  }
+}
+
+@media (min-width: 678px) {
+  .hero {
+    &__wrapper {
+      &--sentence {
+        display: initial;
+        position: fixed;
+        left: 0;
+        transform: rotate(-90deg);
+      }
+    }
+  }
+}
+
+@media (max-height: 725px) {
+  .hero {
+    &__photo {
+      &--heroPhoto {
+        max-width: 200px;
+        max-height: 220px;
+      }
+    }
+
+    &__wrapper {
+      &--borderImage {
+        max-width: 270px;
+        max-height: 345px;
+      }
+
+      &--text {
+        margin-top: 450px;
+      }
+    }
+  }
+}

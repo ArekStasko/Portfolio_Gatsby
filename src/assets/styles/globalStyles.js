@@ -15,7 +15,7 @@ body{
    min-width: 100%;
    min-height: 100%;
    font-family: 'lexend';
-   font-weight: 700;
+   font-weight: $f-weight-lg;
    background-color: black;
    color: white;
    cursor: none;
